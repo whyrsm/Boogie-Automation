@@ -1,0 +1,17 @@
+Customer -> SPH
+- customer punya banyak SPH
+- pastiin di table SPH, itu di kolom customer udah linked, dan cek dia pake id apa
+- di case local dia id nya customer_id (nanti di sesuaikan script nya)
+
+Customer -> PO
+- customer punya banyak PO
+- pastiin di table SPH, itu di kolom customer udah linked, dan cek dia pake id apa
+- di case local dia id nya customer_id (nanti di sesuaikan script nya)
+
+Article <- SPH
+- SPH punya banyak article
+- case di local article udah punya kolom No SPH Customer
+- Perlu dibikin link ke SPH (SPH Customer)
+- di case local dia di article itu id nya "sph_customer_id" (nanti di sesuaikan script nya)
+-
+
