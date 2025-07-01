@@ -15,7 +15,8 @@ const (
 )
 
 func main() {
-	migrasi.CustomerAndSPH(baseURL, authToken, customerTableID, sphCustomerTableID)
+	// migrasi.CustomerAndSPH(baseURL, authToken, customerTableID, sphCustomerTableID)
 	// migrasi.CustomerAndPO(baseURL, authToken, customerTableID, poCustomerTableID)
 	// migrasi.ArticleAndSPH(baseURL, authToken, articleTableID, sphCustomerTableID)
+	migrasi.POAndSPH(baseURL, authToken, poCustomerTableID, sphCustomerTableID)
 }
