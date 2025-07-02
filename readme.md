@@ -36,7 +36,7 @@ docker-compose up
 POST http://{base_url}:3001/api/sync?type={sync-type}
 ```
 
-Ganti `{base_url}` dengan host lokal kamu (misal: `localhost`).
+Ganti `{base_url}` dengan host lokal (misal: `localhost`).
 
 ---
 
@@ -54,6 +54,8 @@ Ganti `{base_url}` dengan host lokal kamu (misal: `localhost`).
 ```http
 POST http://localhost:3001/api/sync?type=customer-po
 ```
+
+jika query parameter tidak dikirimkan, maka akan menjalankan sync semua type
 
 ---
 
