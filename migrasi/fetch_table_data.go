@@ -48,9 +48,6 @@ func fetchTableData(baseURL, authToken, tableID string) ([]map[string]interface{
 			return nil, err
 		}
 
-		// b, _ := json.Marshal(page)
-		// fmt.Println("page:", string(b))
-
 		allRecords = append(allRecords, page.List...)
 		fmt.Printf("📥 Fetched %d records (offset: %d)\n", len(page.List), offset)
 	}

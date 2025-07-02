@@ -61,7 +61,7 @@ func POAndSPH(baseUrL, authToken, poTableID, sphCustomerTableID string) {
 		poID := fmt.Sprint(po["Id"])
 
 		if sphID, ok := sphMap[sphNO]; ok {
-			err := linkArticleAndSPH(baseUrL, authToken, poTableID, poID, sphID)
+			err := linkPOAndSPH(baseUrL, authToken, poTableID, poID, sphID)
 			if err != nil {
 				fmt.Printf("❌ [Article] PO SPH link %s : %v\n", sphNO, err)
 			} else {
