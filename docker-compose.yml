@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  boogie-script-js:
+    build:
+      context: .
+      dockerfile: Dockerfile.node.24
+    working_dir: /home/script/src
+    container_name: boogie-script-js
+    volumes:
+      - .:/home/script/src
+    ports:
+      - 3001:3000
+    command: sh ./run-script.sh
+    tty: true
+    

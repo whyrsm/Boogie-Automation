@@ -1,0 +1,19 @@
+FROM node:24-alpine
+
+RUN apk update && \
+    apk upgrade && \
+    apk add bash git
+    
+RUN apk add tzdata curl \
+    && rm -f /etc/localtime \
+    && cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime \
+    && echo "Asia/Jakarta" > /etc/timezone
+
+RUN mkdir -p /home/script/src/node_modules
+COPY . /home/script/src
+WORKDIR /home/script/src
+
+RUN npm install -g nodemon --unsafe-perm
+
+RUN chmod +x run-script.sh
+CMD ["sh", "./run-script.sh" ]
